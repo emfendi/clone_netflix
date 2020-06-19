@@ -38,14 +38,13 @@ class _SearchScreenState extends State<SearchScreen> {
       }
     }
     return Expanded(
-      child: GridView.count(
-          crossAxisCount: 3,
-          childAspectRatio: 1 / 1.5,
-          padding: EdgeInsets.all(3),
-          children: searchResults
-              .map((data) => _buildListItem(context, data))
-              .toList()),
-    );
+        child: GridView.count(
+            crossAxisCount: 3,
+            childAspectRatio: 1 / 1.5,
+            padding: EdgeInsets.all(3),
+            children: searchResults
+                .map((data) => _buildListItem(context, data))
+                .toList()));
   }
 
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
